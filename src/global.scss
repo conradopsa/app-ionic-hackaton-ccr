@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -28,79 +28,44 @@
 // ----------------------------------------
 
 :root {
-    --ion-color-favorite: #EBEBEB;
-  }
-
-.ion-color-favorite {
-    --ion-color-base: var(--ion-color-favorite);
-  }
-
-// ----------------------------------------
-
-:root {
-    --ion-color-red: #9E260E;
-  }
-
-.ion-color-red {
-    --ion-color-base: var(--ion-color-red);
-  }
-
-// ----------------------------------------
-
-:root {
-    --ion-color-alert: #FFCB00;
-  }
-
-.ion-color-alert {
-    --ion-color-base: var(--ion-color-alert);
-  }
-
-// ----------------------------------------
-
-:root {
-    --ion-color-route: #252525;
-  }
-
-.ion-color-route {
-    --ion-color-base: var(--ion-color-route);
+  --ion-color-favorite: #ebebeb;
+  --ion-color-red: #9e260e;
+  --ion-color-alert: #ffcb00;
+  --ion-color-route: #252525;
+  --ion-color-title-bino: #6d6e71;
+  --ion-color-background-main: #d3d3d3;
+  --ion-color-main: #ebebeb;
+  --ion-color-toolbar-main: #86b2e5;
 }
 
-// ----------------------------------------
+.ion-color-favorite {
+  --ion-color-base: var(--ion-color-favorite);
+}
 
-:root {
-    --ion-color-title-bino: #6D6E71;
+.ion-color-red {
+  --ion-color-base: var(--ion-color-red);
+}
+
+.ion-color-alert {
+  --ion-color-base: var(--ion-color-alert);
+}
+
+.ion-color-route {
+  --ion-color-base: var(--ion-color-route);
 }
 
 .ion-color-title-bino {
-    --ion-color-base: var(--ion-color-title-bino);
-}
-
-// ----------------------------------------
-
-:root {
-    --ion-color-background-main: #D3D3D3;
+  --ion-color-base: var(--ion-color-title-bino);
 }
 
 .ion-color-background-main {
-    --ion-color-base: var(--ion-color-background-main);
- }
-
-// ----------------------------------------
-
-:root {
-    --ion-color-main: #EBEBEB;
+  --ion-color-base: var(--ion-color-background-main);
 }
 
 .ion-color--main {
-    --ion-color-base: var(--ion-color-main);
-}
-
-// ----------------------------------------
-
-:root {
-    --ion-color-toolbar-main: #86B2E5;
+  --ion-color-base: var(--ion-color-main);
 }
 
 .ion-color-toolbar-main {
-    --ion-color-base: var(--ion-color-toolbar-main);
+  --ion-color-base: var(--ion-color-toolbar-main);
 }
