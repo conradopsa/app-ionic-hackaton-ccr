@@ -1,0 +1,20 @@
+:host .grid {
+    
+    display: grid;
+    grid-template-areas: 'elemento elemento'
+                         'elemento elemento';
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 10px;
+
+    *{
+        box-shadow: 3px 3px 3px #6D6E71;
+        border-radius: 5px;
+
+        &:active{
+            background-color: rgb(238, 238, 238);
+        }
+    }
+
+
+} 
