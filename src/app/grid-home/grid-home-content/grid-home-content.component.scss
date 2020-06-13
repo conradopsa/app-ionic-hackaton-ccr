@@ -1,6 +1,21 @@
 :host {
     display: block;
-    background-color: whitesmoke;
+    background-color: transparent;
+    
+    ion-card {
+        box-shadow: 3px 3px 3px #6D6E71;
+        /*margin-left: -5px;
+        margin-right: -5px;
+        margin-inline-start: 10px;
+        margin-inline-end: 8px;*/
+
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
 
     p {
         text-align: center;
