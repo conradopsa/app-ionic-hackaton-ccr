@@ -4,6 +4,6 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-   <app-bino > </app-bino>
+<ion-content padding [style.background-color]="bgcolor">
+   <app-bino ion-button (click)="startListening()"  padding [style.background-color]="bgcolor"> </app-bino>
 </ion-content>
