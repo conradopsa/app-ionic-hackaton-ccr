@@ -18,7 +18,7 @@ export class AppComponent {
     private speechRecognition: SpeechRecognition
   ) {
       this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.styleLightContent();
       this.splashScreen.hide();
 
       this.speechRecognition.hasPermission()

@@ -6,4 +6,9 @@
 
 <ion-content padding [style.background-color]="bgcolor">
    <app-bino ion-button (click)="startListening()"  padding [style.background-color]="bgcolor"> </app-bino>
+
+   <ion-label>Tudo bem?</ion-label>
+   <ion-input type="text" [(ngModel)]="ttsText"></ion-input>
+   <ion-button (click)="TestTTS()" expand="full" color="dark">Fale</ion-button>
 </ion-content>
+

@@ -1,6 +1,7 @@
 import { Platform } from '@ionic/angular';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
 @Component({
   selector: 'app-home',
@@ -13,15 +14,10 @@ export class HomePage  {
   matches: Array<string> = [];
   isSpeechAvailable = false;
   isListening = false;
-  // let options = {
-  //    language = 'es-US',
-  //    matches = 5,
-  //    prompt = 'teste options',
-  //    showPopup = true,
-  //    showPartial = false
-  // };
+  ttsText: any = "";
 
-  constructor(private platform: Platform, public speechRecognition: SpeechRecognition, private changeDetectorRef: ChangeDetectorRef) { 
+  constructor(private platform: Platform, public speechRecognition: SpeechRecognition, 
+              private changeDetectorRef: ChangeDetectorRef, public tts: TextToSpeech) { 
     platform.ready().then(() => {
         this.speechRecognition.isRecognitionAvailable()
         .then((available: boolean) => this.isSpeechAvailable = available)
@@ -58,6 +54,10 @@ export class HomePage  {
 
   public stopListening(): void{
     this.speechRecognition.stopListening();
+  }
+  
+  public TestTTS(){
+    this.tts.speak({text: this.ttsText, locale: 'pt-BR', rate: 1});
   }
 
   // ngOnInit() {
