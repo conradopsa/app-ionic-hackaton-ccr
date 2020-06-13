@@ -9,13 +9,16 @@ import { BinoModule } from '../bino/bino.module';
 
 import { ToolbarCcrComponent } from '../toolbar-ccr/toolbar-ccr.component';
 
+import { GridHomeModule } from '../grid-home/grid-home.module';
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     HomePageRoutingModule,
-    BinoModule
+    BinoModule,
+    GridHomeModule
   ],
   declarations: [
     HomePage,
