@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
     SplashScreen,
     SpeechRecognition,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    TextToSpeech
+    TextToSpeech,
+    BackgroundMode
   ],
   bootstrap: [AppComponent]
 })

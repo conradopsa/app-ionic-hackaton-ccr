@@ -4,11 +4,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding [style.background-color]="bgcolor">
-   <app-bino ion-button (click)="startListening()"  padding [style.background-color]="bgcolor"> </app-bino>
+<ion-content >
+  <ion-label 
+    style="margin-top: 30px; display: flex; flex-direction: column; position: center; text-align: center; color:gray; align-self: center; margin-left: auto; margin-right: auto;">
+    Toque no Bino e diga: "Rastreamento"!
+  </ion-label>
+   <app-bino ion-button (click)="startListening()"> </app-bino>
+</ion-content>
+<ion-content style="display: flex; flex-direction: column; position: center; text-align: center;">
 
-   <ion-label>Tudo bem?</ion-label>
-   <ion-input type="text" [(ngModel)]="ttsText"></ion-input>
-   <ion-button (click)="TestTTS()" expand="full" color="dark">Fale</ion-button>
+   <ion-input 
+   style="align-self: center; border-top: 1px solid gray; margin-left: auto; margin-right: auto;" 
+   placeholder="Digite algo ..." style="color:gray;" type="text" [(ngModel)]="ttsText">
+  </ion-input>
+   <button ion-button 
+   style="width: 100px; height: 30px; border-radius: 100px ;position: center; margin-left: auto; margin-right: auto;" 
+   (click)="TestTTS()" expand="full"  [style.background-color]="bgcolor">
+   Ouça
+  </button>
+  
 </ion-content>
 

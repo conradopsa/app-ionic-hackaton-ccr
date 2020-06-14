@@ -1,7 +1,10 @@
-import { Platform } from '@ionic/angular';
+import { Routes, Router } from '@angular/router';
+import { Platform, NavController, NavParams } from '@ionic/angular';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+import { BackgroundMode } from '@ionic-native/background-mode/ngx';
+import { GeolocationPage } from './../geolocation/geolocation.page';
 
 @Component({
   selector: 'app-home',
@@ -9,19 +12,23 @@ import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage  {
-
-  public bgcolor: string = 'whrite';
+  geolocationPage = GeolocationPage;
+  router: Router;
+  public bgcolor: string = 'dark';
   matches: Array<string> = [];
   isSpeechAvailable = false;
   isListening = false;
   ttsText: any = "";
 
   constructor(private platform: Platform, public speechRecognition: SpeechRecognition, 
-              private changeDetectorRef: ChangeDetectorRef, public tts: TextToSpeech) { 
+              private changeDetectorRef: ChangeDetectorRef, public tts: TextToSpeech,
+              public backgroundMode: BackgroundMode, router: Router) { 
+    this.router = router;
     platform.ready().then(() => {
         this.speechRecognition.isRecognitionAvailable()
         .then((available: boolean) => this.isSpeechAvailable = available)
     });
+    this.backgroundMode.enable();
   }
 
   public startListening(): void{
@@ -41,6 +48,9 @@ export class HomePage  {
           console.log(this.matches);
           this.bgcolor = matches[0];
           console.log(this.bgcolor);
+          if( matches[0] == 'rastreamento' || matches[0] == 'Rastreamento'){
+            this.router.navigate(['geolocation']);
+          }
           this.changeDetectorRef.detectChanges();
           this.stopListening();
         },
@@ -49,7 +59,7 @@ export class HomePage  {
           this.changeDetectorRef.detectChanges();
           console.log('errei' + onerror);
         }
-    )
+      )
   }
 
   public stopListening(): void{
@@ -60,6 +70,11 @@ export class HomePage  {
     this.tts.speak({text: this.ttsText, locale: 'pt-BR', rate: 1});
   }
 
+  // public goToNextPage () {
+  //   this.navCtrl.navigateRoot('geoLocation');
+  // }
+
+  
   // ngOnInit() {
   //    this.spreechRecognition.hasPermission()
   //    .then((hasPermission: boolean) => {

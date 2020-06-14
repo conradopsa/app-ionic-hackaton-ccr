@@ -23,7 +23,7 @@ export class AppComponent {
 
       this.speechRecognition.hasPermission()
       .then((hasPermission: boolean) => {
-        console.log('vocale?' + hasPermission);
+        console.log('vocale permission?' + hasPermission);
 
         if(!hasPermission){
             this.requestSpeechRecognitionPermission();

@@ -1,3 +1,4 @@
+import { GeolocationPageModule } from './../geolocation/geolocation.module';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,8 @@ import { BinoModule } from '../bino/bino.module';
     CommonModule,
     FormsModule,
     HomePageRoutingModule,
-    BinoModule
+    BinoModule,
+    GeolocationPageModule
   ],
   declarations: [HomePage]
 })
