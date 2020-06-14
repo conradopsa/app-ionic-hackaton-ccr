@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'diagnostico',
     loadChildren: () => import('./diagnostico/diagnostico.module').then( m => m.DiagnosticoPageModule)
+  },
+  {
+    path: 'questionario',
+    loadChildren: () => import('./questionario/questionario.module').then( m => m.QuestionarioPageModule)
+  },
+  {
+    path: 'dicas',
+    loadChildren: () => import('./dicas/dicas.module').then( m => m.DicasPageModule)
   }
 ];
 

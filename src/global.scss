@@ -36,6 +36,8 @@
   --ion-color-background-main: #d3d3d3;
   --ion-color-main: #ebebeb;
   --ion-color-toolbar-main: #86b2e5;
+  --ion-color-confirm-btn: #008000;
+  --ion-color-negative-btn: #9e260e;
 
   //--ion-background-color: #d3d3d3;
   font-style: Calibri;
@@ -72,4 +74,12 @@
 
 .ion-color-toolbar-main {
   --ion-color-base: var(--ion-color-toolbar-main);
+}
+
+.ion-color-confirm-btn {
+  --ion-color-base: var(--ion-color-confirm-btn);
+}
+
+.ion-color-negative-btn {
+  --ion-color-base: var(--ion-color-negative-btn);
 }
