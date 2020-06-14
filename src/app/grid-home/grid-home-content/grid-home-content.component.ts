@@ -9,6 +9,7 @@ export class GridHomeContentComponent implements OnInit {
 
   @Input() public text : string;
   @Input() public image : string;
+  @Input() public link : string;
 
   constructor() { }
 

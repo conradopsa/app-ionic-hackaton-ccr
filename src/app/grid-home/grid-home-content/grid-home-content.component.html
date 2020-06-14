@@ -1,4 +1,11 @@
-<ion-img [src]="this.image"></ion-img>
-<p>
-  {{this.text}}
-</p>
+<ion-card [routerLink]="this.link">
+  <div>
+    <ion-img [src]="this.image"></ion-img>    
+    <div class="break"></div>
+    <p>
+      {{this.text}}
+    </p>
+  </div>  
+</ion-card>
+
+
