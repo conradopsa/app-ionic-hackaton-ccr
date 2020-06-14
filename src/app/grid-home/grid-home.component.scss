@@ -1,21 +1,12 @@
 :host .grid {
     
     display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    
     grid-template-areas: 'elemento elemento'
                          'elemento elemento';
-    grid-template-columns: 1fr 1fr;
+    
 
     grid-gap: 10px;
-/*
-    *{
-        box-shadow: 3px 3px 3px rgba(109, 110, 113, 0.63);
-        border-radius: 5px;
-        
-
-        &:active{
-            background-color: rgb(238, 238, 238);
-        }
-    }*/
-    margin: 10px;
-
 } 
