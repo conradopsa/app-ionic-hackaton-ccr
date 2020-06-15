@@ -39,10 +39,24 @@
   --ion-color-confirm-btn: #008000;
   --ion-color-negative-btn: #9e260e;
 
+  --ion-toolbar-background: whitesmoke;
+
   --ion-background-color: #d3d3d3;
   font-style: Calibri;
   font-weight: bold;
 }
+
+app-bino {
+  margin-top: 10%;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-back-button {
+  background-color: whitesmoke;
+}
+
 
 .ion-color-favorite {
   --ion-color-base: var(--ion-color-favorite);

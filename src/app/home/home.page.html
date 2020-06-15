@@ -8,20 +8,21 @@
 
 <app-bino ion-button (click)="startListening()"></app-bino>
 
-<!--
-  Teste de fala
 
-  <ion-content style="display: flex; flex-direction: column; position: center; text-align: center;">
 
-  <ion-input style="align-self: center; border-top: 1px solid gray; margin-left: auto; margin-right: auto;"
-    placeholder="Digite algo ..." style="color:gray;" type="text" [(ngModel)]="ttsText">
+<div style="margin-left: auto; margin-right: auto">
+  <ion-input style="align-self: center; margin-left: auto; margin-right: auto;"
+    placeholder="Digite algo ..." type="text" [(ngModel)]="ttsText">
   </ion-input>
-  <button ion-button
-    style="width: 100px; height: 30px; border-radius: 100px ;position: center; margin-left: auto; margin-right: auto;"
+  <div style="">
+    <button
+    style="width: 100%; height: 30px; border-radius: 100px ;"
     (click)="TestTTS()" expand="full" [style.background-color]="bgcolor">
     Ouça
   </button>
+  </div>
+  
+</div>
 
-</ion-content>-->
 
 <app-grid-home></app-grid-home>
