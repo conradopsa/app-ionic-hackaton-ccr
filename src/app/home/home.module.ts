@@ -8,6 +8,10 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { BinoModule } from '../bino/bino.module';
 
+import { ToolbarCcrComponent } from '../toolbar-ccr/toolbar-ccr.component';
+
+import { GridHomeModule } from '../grid-home/grid-home.module';
+
 @NgModule({
   imports: [
     IonicModule,
@@ -15,8 +19,12 @@ import { BinoModule } from '../bino/bino.module';
     FormsModule,
     HomePageRoutingModule,
     BinoModule,
-    GeolocationPageModule
+    GeolocationPageModule,
+    GridHomeModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    ToolbarCcrComponent
+  ]
 })
-export class HomePageModule {}
+export class HomePageModule { }

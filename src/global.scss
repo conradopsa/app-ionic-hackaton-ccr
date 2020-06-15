@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,62 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// ----------------------------------------
+
+:root {
+  --ion-color-favorite: #ebebeb;
+  --ion-color-red: #9e260e;
+  --ion-color-alert: #ffcb00;
+  --ion-color-route: #252525;
+  --ion-color-title-bino: #6d6e71;
+  --ion-color-background-main: #d3d3d3;
+  --ion-color-main: #ebebeb;
+  --ion-color-toolbar-main: #86b2e5;
+  --ion-color-confirm-btn: #008000;
+  --ion-color-negative-btn: #9e260e;
+
+  --ion-background-color: #d3d3d3;
+  font-style: Calibri;
+  font-weight: bold;
+}
+
+.ion-color-favorite {
+  --ion-color-base: var(--ion-color-favorite);
+}
+
+.ion-color-red {
+  --ion-color-base: var(--ion-color-red);
+}
+
+.ion-color-alert {
+  --ion-color-base: var(--ion-color-alert);
+}
+
+.ion-color-route {
+  --ion-color-base: var(--ion-color-route);
+}
+
+.ion-color-title-bino {
+  --ion-color-base: var(--ion-color-title-bino);
+}
+
+.ion-color-background-main {
+  --ion-color-base: var(--ion-color-background-main);
+}
+
+.ion-color--main {
+  --ion-color-base: var(--ion-color-main);
+}
+
+.ion-color-toolbar-main {
+  --ion-color-base: var(--ion-color-toolbar-main);
+}
+
+.ion-color-confirm-btn {
+  --ion-color-base: var(--ion-color-confirm-btn);
+}
+
+.ion-color-negative-btn {
+  --ion-color-base: var(--ion-color-negative-btn);
+}
